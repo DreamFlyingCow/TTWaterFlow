@@ -10,9 +10,8 @@
 
 
 typedef CGFloat(^HeightBlock)(NSIndexPath *indexPath , CGFloat width);
+
 @interface TTLayout : UICollectionViewLayout
-
-
 /**
  *  列数
  */

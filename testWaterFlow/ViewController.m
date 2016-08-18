@@ -17,14 +17,9 @@ static NSString *ID = @"UICollectionViewCell";
 @end
 
 
-
-
-
-
 @implementation ViewController
 
-
-
+#pragma mark - 懒加载layout
 - (TTLayout *)layout {
     if (_layout == nil) {
         _layout = [[TTLayout alloc] init];
@@ -59,7 +54,7 @@ static NSString *ID = @"UICollectionViewCell";
     
 }
 
-
+#pragma mark - UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
@@ -72,7 +67,6 @@ static NSString *ID = @"UICollectionViewCell";
     
     UICollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
     cell.contentView.backgroundColor = [self randomColor];
-    
     
     return cell;
 }

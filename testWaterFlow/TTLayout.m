@@ -8,9 +8,7 @@
 
 #import "TTLayout.h"
 
-
 @interface TTLayout ()
-
 /**
  *  存放每列高度字典
  */
