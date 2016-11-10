@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		824B83B01DD472E4008AB1C0 /* TTLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 824B83AF1DD472E4008AB1C0 /* TTLayout.m */; };
 		826149501D52ECAC006B3241 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8261494F1D52ECAC006B3241 /* main.m */; };
 		826149531D52ECAC006B3241 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 826149521D52ECAC006B3241 /* AppDelegate.m */; };
 		826149561D52ECAC006B3241 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 826149551D52ECAC006B3241 /* ViewController.m */; };
 		826149591D52ECAC006B3241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 826149571D52ECAC006B3241 /* Main.storyboard */; };
 		8261495B1D52ECAC006B3241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8261495A1D52ECAC006B3241 /* Assets.xcassets */; };
 		8261495E1D52ECAC006B3241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8261495C1D52ECAC006B3241 /* LaunchScreen.storyboard */; };
-		826149671D52ECEE006B3241 /* TTLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 826149661D52ECEE006B3241 /* TTLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8261494B1D52ECAC006B3241 /* testWaterFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testWaterFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		824B83AE1DD472E4008AB1C0 /* TTLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLayout.h; sourceTree = "<group>"; };
+		824B83AF1DD472E4008AB1C0 /* TTLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLayout.m; sourceTree = "<group>"; };
+		8261494B1D52ECAC006B3241 /* TTLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8261494F1D52ECAC006B3241 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		826149511D52ECAC006B3241 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		826149521D52ECAC006B3241 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -27,8 +29,6 @@
 		8261495A1D52ECAC006B3241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8261495D1D52ECAC006B3241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8261495F1D52ECAC006B3241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		826149651D52ECEE006B3241 /* TTLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLayout.h; sourceTree = "<group>"; };
-		826149661D52ECEE006B3241 /* TTLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,10 +42,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		824B83AD1DD472E4008AB1C0 /* TTLayout */ = {
+			isa = PBXGroup;
+			children = (
+				824B83AE1DD472E4008AB1C0 /* TTLayout.h */,
+				824B83AF1DD472E4008AB1C0 /* TTLayout.m */,
+			);
+			path = TTLayout;
+			sourceTree = "<group>";
+		};
 		826149421D52ECAC006B3241 = {
 			isa = PBXGroup;
 			children = (
-				8261494D1D52ECAC006B3241 /* testWaterFlow */,
+				8261494D1D52ECAC006B3241 /* TTLayoutDemo */,
 				8261494C1D52ECAC006B3241 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,27 +62,26 @@
 		8261494C1D52ECAC006B3241 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8261494B1D52ECAC006B3241 /* testWaterFlow.app */,
+				8261494B1D52ECAC006B3241 /* TTLayoutDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8261494D1D52ECAC006B3241 /* testWaterFlow */ = {
+		8261494D1D52ECAC006B3241 /* TTLayoutDemo */ = {
 			isa = PBXGroup;
 			children = (
+				824B83AD1DD472E4008AB1C0 /* TTLayout */,
 				826149511D52ECAC006B3241 /* AppDelegate.h */,
 				826149521D52ECAC006B3241 /* AppDelegate.m */,
 				826149541D52ECAC006B3241 /* ViewController.h */,
 				826149551D52ECAC006B3241 /* ViewController.m */,
-				826149651D52ECEE006B3241 /* TTLayout.h */,
-				826149661D52ECEE006B3241 /* TTLayout.m */,
 				826149571D52ECAC006B3241 /* Main.storyboard */,
 				8261495A1D52ECAC006B3241 /* Assets.xcassets */,
 				8261495C1D52ECAC006B3241 /* LaunchScreen.storyboard */,
 				8261495F1D52ECAC006B3241 /* Info.plist */,
 				8261494E1D52ECAC006B3241 /* Supporting Files */,
 			);
-			path = testWaterFlow;
+			path = TTLayoutDemo;
 			sourceTree = "<group>";
 		};
 		8261494E1D52ECAC006B3241 /* Supporting Files */ = {
@@ -87,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8261494A1D52ECAC006B3241 /* testWaterFlow */ = {
+		8261494A1D52ECAC006B3241 /* TTLayoutDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 826149621D52ECAC006B3241 /* Build configuration list for PBXNativeTarget "testWaterFlow" */;
+			buildConfigurationList = 826149621D52ECAC006B3241 /* Build configuration list for PBXNativeTarget "TTLayoutDemo" */;
 			buildPhases = (
 				826149471D52ECAC006B3241 /* Sources */,
 				826149481D52ECAC006B3241 /* Frameworks */,
@@ -99,9 +107,9 @@
 			);
 			dependencies = (
 			);
-			name = testWaterFlow;
-			productName = testWaterFlow;
-			productReference = 8261494B1D52ECAC006B3241 /* testWaterFlow.app */;
+			name = TTLayoutDemo;
+			productName = TTLayoutDemo;
+			productReference = 8261494B1D52ECAC006B3241 /* TTLayoutDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -118,7 +126,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 826149461D52ECAC006B3241 /* Build configuration list for PBXProject "testWaterFlow" */;
+			buildConfigurationList = 826149461D52ECAC006B3241 /* Build configuration list for PBXProject "TTLayoutDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -131,7 +139,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8261494A1D52ECAC006B3241 /* testWaterFlow */,
+				8261494A1D52ECAC006B3241 /* TTLayoutDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -157,7 +165,7 @@
 				826149561D52ECAC006B3241 /* ViewController.m in Sources */,
 				826149531D52ECAC006B3241 /* AppDelegate.m in Sources */,
 				826149501D52ECAC006B3241 /* main.m in Sources */,
-				826149671D52ECEE006B3241 /* TTLayout.m in Sources */,
+				824B83B01DD472E4008AB1C0 /* TTLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,11 +277,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = testWaterFlow/Info.plist;
+				INFOPLIST_FILE = TTLayoutDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cn.sm.testWaterFlow;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cn.sm.TTLayoutDemo;
+				PRODUCT_NAME = TTLayoutDemo;
 			};
 			name = Debug;
 		};
@@ -281,18 +289,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = testWaterFlow/Info.plist;
+				INFOPLIST_FILE = TTLayoutDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cn.sm.testWaterFlow;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cn.sm.TTLayoutDemo;
+				PRODUCT_NAME = TTLayoutDemo;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		826149461D52ECAC006B3241 /* Build configuration list for PBXProject "testWaterFlow" */ = {
+		826149461D52ECAC006B3241 /* Build configuration list for PBXProject "TTLayoutDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				826149601D52ECAC006B3241 /* Debug */,
@@ -301,7 +309,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		826149621D52ECAC006B3241 /* Build configuration list for PBXNativeTarget "testWaterFlow" */ = {
+		826149621D52ECAC006B3241 /* Build configuration list for PBXNativeTarget "TTLayoutDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				826149631D52ECAC006B3241 /* Debug */,

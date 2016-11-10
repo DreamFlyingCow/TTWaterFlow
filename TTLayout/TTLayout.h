@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-
 typedef CGFloat(^HeightBlock)(NSIndexPath *indexPath , CGFloat width);
-
 @interface TTLayout : UICollectionViewLayout
 /**
  *  列数
@@ -28,13 +26,11 @@ typedef CGFloat(^HeightBlock)(NSIndexPath *indexPath , CGFloat width);
  *  内边距
  */
 @property (nonatomic, assign) UIEdgeInsets sectionInset;
-
 /**
  *  对象方法
  *
  *  @param block 在block中最后要返回一个item的高度
  */
 - (void)computeIndexCellHeightWithWidthBlock:(CGFloat(^)(NSIndexPath *indexPath , CGFloat width))block;
-
 
 @end

@@ -21,9 +21,7 @@
  *  计算每个item高度的block，必须实现
  */
 @property (nonatomic, copy) HeightBlock block;
-
 @end
-
 
 @implementation TTLayout
 
@@ -47,7 +45,6 @@
     }
     return self;
 }
-
 /**
  *  准备好布局时调用
  */
@@ -59,19 +56,14 @@
         for (NSInteger i = 0; i < self.lineNumber ; i++) {
             
             [_dicOfheight setObject:@(self.sectionInset.top) forKey:[NSString stringWithFormat:@"%ld",i]];
-            
             }
         //得到每个item的属性值进行存储
         for (NSInteger i = 0 ; i < count; i ++) {
             
             NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
             [_array addObject:[self layoutAttributesForItemAtIndexPath:indexPath]];
-            
             }
-    
-    
 }
-
 /**
  *  设置可滚动区域范围
  *
@@ -91,8 +83,6 @@
         return CGSizeMake(self.collectionView.bounds.size.width, [_dicOfheight[maxHeightline] floatValue] + self.sectionInset.bottom);
     
 }
-
-
 /**
  *
  *  @return 返回视图框内item的属性，可以直接返回所有item属性
@@ -103,8 +93,6 @@
     return _array;
     
 }
-
-
 /**
  *  计算indexPath下item的属性的方法
  *
@@ -122,6 +110,7 @@
             
             itemH = self.block(indexPath, itemW);
             } else {
+                
                 NSAssert(itemH != 0,@"Please implement computeIndexCellHeightWithWidthBlock Method");
                 }
         //计算item的frame
@@ -130,7 +119,9 @@
         //循环遍历找出高度最短行
         __block NSString *lineMinHeight = @"0";
         [_dicOfheight enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSNumber *obj, BOOL *stop) {
+            
             if ([_dicOfheight[lineMinHeight] floatValue] > [obj floatValue]) {
+                
                 lineMinHeight = key;
                 }
             }];
@@ -139,13 +130,8 @@
         frame.origin = CGPointMake(self.sectionInset.left + line * (itemW + self.lineSpacing), [_dicOfheight[lineMinHeight] floatValue]);
         _dicOfheight[lineMinHeight] = @(frame.size.height + self.rowSpacing + [_dicOfheight[lineMinHeight] floatValue]);
         attr.frame = frame;
-    
         return attr;
-    
-    
-    
 }
-
 /**
  *  设置计算高度block方法
  *
@@ -153,14 +139,10 @@
  */
 - (void)computeIndexCellHeightWithWidthBlock:(CGFloat (^)(NSIndexPath *, CGFloat))block {
  
-    
     if (self.block != block) {
         
         self.block = block;
     }
-    
 }
-
-
 
 @end

@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  testWaterFlow
+//  TTLayoutDemo
 //
 //  Created by 赵春浩 on 16/8/4.
 //  Copyright © 2016年 赵春浩. All rights reserved.
@@ -12,10 +12,11 @@
 static NSString *ID = @"UICollectionViewCell";
 @interface ViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+/**
+ *  自定义layout
+ */
 @property (strong, nonatomic) TTLayout *layout;
-
 @end
-
 
 @implementation ViewController
 
@@ -28,12 +29,11 @@ static NSString *ID = @"UICollectionViewCell";
     return _layout;
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationController.navigationBar.alpha = 1.0;
-    
+    // 设置layout
     self.collectionView.collectionViewLayout = self.layout;
     // 透明时用这个属性(保证collectionView 不会被遮挡, 也不会向下移)
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -45,21 +45,22 @@ static NSString *ID = @"UICollectionViewCell";
     self.collectionView.delegate = self;
     self.collectionView.backgroundColor = [UIColor lightGrayColor];
     
-    [self.layout computeIndexCellHeightWithWidthBlock:^CGFloat(NSIndexPath *indexPath, CGFloat width) {
+    [self.layout computeIndexCellHeightWithWidthBlock:^CGFloat(NSIndexPath *indexPath, CGFloat width) {// 此方法返回item的高度
         
         int randomNum = arc4random_uniform(200);
         
         return (CGFloat)randomNum;
     }];
-    
 }
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    
     return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
     return 100;
 }
 
@@ -67,22 +68,17 @@ static NSString *ID = @"UICollectionViewCell";
     
     UICollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
     cell.contentView.backgroundColor = [self randomColor];
-    
     return cell;
 }
-
 
 - (UIColor *)randomColor {
     
     return [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1.0];
-    
 }
 
-
-
 - (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
