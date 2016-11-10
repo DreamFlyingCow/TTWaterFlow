@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "Apache", :file => "LICENSE" }
   s.author             = { "ZCH" => "dreamflyingcow@126.com" }
   s.social_media_url   = "http://www.weibo.com/u/2198542311"
-  s.source       = { :git => "https://github.com/DreamFlyingCow/TTWaterFlow.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/DreamFlyingCow/TTWaterFlow.git", :tag => "s.version" }
   s.source_files  = "TTLayout/*"
   s.resources     = "TTLayout/TTLayout.bundle"
   s.requires_arc = true
