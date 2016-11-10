@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
   s.source_files  = "TTLayout/*"
   s.resources     = "TTLayout/TTLayout.bundle"
   s.requires_arc = true
-  echo "2.3" > .swift-version
+  "2.3" > s.swift-version
 
 end
