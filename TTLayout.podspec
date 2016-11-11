@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TTLayout"
-  s.version      = "1.0.1"
+  s.version      = "1.0.4"
   s.ios.deployment_target = '7.0'
   s.summary      = "It is just a custom layout for flow layout, and it can auto calculate the height of the item, and arrange them"
   s.homepage     = "https://github.com/DreamFlyingCow/TTWaterFlow"
@@ -12,6 +12,5 @@ Pod::Spec.new do |s|
   s.source_files  = "TTLayout/*"
   s.resources     = "TTLayout/TTLayout.bundle"
   s.requires_arc = true
-  "2.3" > s.swift-version
 
 end
